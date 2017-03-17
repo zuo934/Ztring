@@ -1,102 +1,98 @@
 import turtle
 
 class draw():
-    def __init__(self,pensize,R,color,i,num,string):
+    def __init__(self,pensize,R,color,i,num):
         turtle.pensize(pensize)
         turtle.color(color)
         self.R = R
         self.i = i
         self.num = num
-        self.string = string
 
-    def putin(self):
-        self.string = input('Please enter something:\n')
-        self.num = len(self.string)
-
-    def drawString(self):
+    def drawString(self,string):
+        self.num = len(string)
         #print(self.num)
-        #print(self.string)
+        #print(string)
         turtle.speed(10)
         for i in range(self.num):
-            if self.string[i] == ' ':
+            if string[i] == ' ':
                 self.theNext(i)
-            if self.string[i] == 'a':
+            if string[i] == 'a':
                 self.drawA()
                 self.theNext(i)
                 print(i)
-            if self.string[i] == 'b':
+            if string[i] == 'b':
                 self.drawB()
                 self.theNext(i)
-            if self.string[i] == 'c':
+            if string[i] == 'c':
                 self.drawC()
                 self.theNext(i)
-            if self.string[i] == 'd':
+            if string[i] == 'd':
                 self.drawD()
                 self.theNext(i)
-            if self.string[i] == 'e':
+            if string[i] == 'e':
                 self.drawE()
                 self.theNext(i)
-            if self.string[i] == 'f':
+            if string[i] == 'f':
                 self.drawF()
                 self.theNext(i)
-            if self.string[i] == 'g':
+            if string[i] == 'g':
                 self.drawG()
                 self.theNext(i)
-            if self.string[i] == 'h':
+            if string[i] == 'h':
                 self.drawH()
                 self.theNext(i)
-            if self.string[i] == 'i':
+            if string[i] == 'i':
                 self.drawI()
                 self.theNext(i)
-            if self.string[i] == 'j':
+            if string[i] == 'j':
                 self.drawJ()
                 self.theNext(i)
-            if self.string[i] == 'k':
+            if string[i] == 'k':
                 self.drawK()
                 self.theNext(i)
-            if self.string[i] == 'l':
+            if string[i] == 'l':
                 self.drawL()
                 self.theNext(i)
-            if self.string[i] == 'm':
+            if string[i] == 'm':
                 self.drawM()
                 self.theNext(i)
-            if self.string[i] == 'n':
+            if string[i] == 'n':
                 self.drawN()
                 self.theNext(i)
-            if self.string[i] == 'o':
+            if string[i] == 'o':
                 self.drawO()
                 self.theNext(i)
-            if self.string[i] == 'p':
+            if string[i] == 'p':
                 self.drawP()
                 self.theNext(i)
-            if self.string[i] == 'q':
+            if string[i] == 'q':
                 self.drawQ()
                 self.theNext(i)
-            if self.string[i] == 'r':
+            if string[i] == 'r':
                 self.drawR()
                 self.theNext(i)
-            if self.string[i] == 's':
+            if string[i] == 's':
                 self.drawS()
                 self.theNext(i)
-            if self.string[i] == 't':
+            if string[i] == 't':
                 self.drawT()
                 self.theNext(i)
-            if self.string[i] == 'u':
+            if string[i] == 'u':
                 self.drawU()
                 self.theNext(i)
-            if self.string[i] == 'v':
+            if string[i] == 'v':
                 self.drawV()
                 self.theNext(i)
-            if self.string[i] == 'w':
+            if string[i] == 'w':
                 self.drawW()
                 self.theNext(i)
-            if self.string[i] == 'x':
+            if string[i] == 'x':
                 self.drawX()
                 self.theNext(i)
-            if self.string[i] == 'y':
+            if string[i] == 'y':
                 self.drawY()
                 self.theNext(i)
-            if self.string[i] == 'z':
+            if string[i] == 'z':
                 self.drawZ()
                 self.theNext(i)
             else :
@@ -632,9 +628,10 @@ class draw():
 
 
 def main():
-    test = draw(5,20,'black',1,0,'')
-    test.putin()
-    test.drawString()
+    test = draw(5,20,'black',1,0)
+    while(1):
+        string = input('Please enter something:\n')
+        test.drawString(string)
     input('Please<enter>')
 
 
